@@ -114,16 +114,7 @@ header {
 
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
-}
-@-webkit-keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
+  animation: scaleAnim 1s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
@@ -382,6 +373,12 @@ header {
 .about-stats .progress-bars .progress-bar .progress-cont .progress .sass {
   width: 60%;
 }
+.about-stats .progress-bars .progress-bar .progress-cont .progress .python {
+  width: 70%;
+}
+.about-stats .progress-bars .progress-bar .progress-cont .progress .django {
+  width: 60%;
+}
 
 /* Portfolio */
 .portfolio-txt {
@@ -402,9 +399,10 @@ header {
 .portfolios .portfolio-item img {
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 15px;
+  background-color: darkslategray;
 }
 .portfolios .portfolio-item .hover-item {
   width: 100%;
@@ -477,8 +475,8 @@ header {
 .certs .cert img {
   width: 100%;
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   filter: grayscale(100%);
@@ -746,31 +744,30 @@ header {
   font-size: 6.3rem;
 }
 
-/* .main-title-cert{
-    text-align: center;
-    h2{
-        position: relative;
-        text-transform: uppercase;
-        font-size: 4rem;
-        font-weight: 700;
-        span{
-            color: var(--color-secondary);
-        }
-        .back-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            color: var(--color-grey5);
-            transition: all .4s ease-in-out;
-            z-index: -1;
-            transform: translate(-50%,-50%);
-            font-weight: 800;
-            font-size: 6.3rem;
+.main-title-cert {
+  text-align: center;
+}
+.main-title-cert h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title-cert h2 span {
+  color: var(--color-secondary);
+}
+.main-title-cert h2 .back-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+}
 
-}
-    }
-}
- */
 @media screen and (max-width: 600px) {
   .about-content {
     grid-template-columns: 1fr;

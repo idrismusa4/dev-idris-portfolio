@@ -407,6 +407,14 @@ header {
                         width: 60% ;
                     }
 
+                    .python{
+                        width: 70% ;
+                    }
+
+                    .django{
+                        width: 60% ;
+                    }
+
                 }
             }
         }
@@ -431,8 +439,9 @@ header {
         img{
             width: 100%;
             height: 300px;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 15px;
+            background-color: darkslategray;
         }
         .hover-item{
             width: 100%;
@@ -517,7 +526,7 @@ header {
         img{
             width: 100%;
             height: 300px;
-            object-fit: cover;
+            object-fit: contain;
             border-top-left-radius: 5px ;
             border-top-right-radius: 5px ;
             filter: grayscale(100%);
@@ -814,7 +823,7 @@ header {
     }
 }
 
-/* .main-title-cert{
+.main-title-cert{
     text-align: center;
     h2{
         position: relative;
@@ -838,5 +847,5 @@ header {
 }
     }
 }
- */
+
 @import 'media';
